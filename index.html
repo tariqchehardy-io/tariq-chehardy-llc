@@ -89,7 +89,7 @@
   .nav .cta{color:var(--accent);font-weight:500;border:1.5px solid rgba(41,151,255,.5);border-radius:980px;padding:7px 15px;transition:background .2s}
   .nav .cta:hover{background:rgba(41,151,255,.08)}
 
-  .hero{text-align:center;padding:96px 0 72px;position:relative;overflow:hidden}
+  .hero{text-align:left;padding:120px 0 90px;position:relative;overflow:hidden}
   .hero::before{content:"";position:absolute;inset:-20px -20px 0;pointer-events:none;
     background:radial-gradient(ellipse 700px 500px at 50% 15%,rgba(41,151,255,.14),transparent 65%)}
   .hero>*{position:relative;animation:heroIn .75s cubic-bezier(.2,.7,.3,1) both}
@@ -102,11 +102,11 @@
   .hero .eyebrow{font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:18px}
   h1{font-size:clamp(42px,7.5vw,76px);font-weight:700;letter-spacing:-.025em;line-height:1.05;
     background:linear-gradient(90deg,#ffffff,#8bd0ff);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
-  .hero p{color:var(--muted);font-size:clamp(18px,2.3vw,22px);letter-spacing:-.008em;max-width:700px;margin:22px auto 0;line-height:1.45}
+  .hero p{color:var(--muted);font-size:clamp(18px,2.3vw,22px);letter-spacing:-.008em;max-width:640px;margin:22px 0 0;line-height:1.45}
   .hero p b{color:var(--ink);font-weight:600}
-  .hero-facts{margin-top:30px;display:flex;gap:8px;justify-content:center;align-items:center;flex-wrap:wrap;font-size:13.5px;color:var(--muted)}
+  .hero-facts{margin-top:30px;display:flex;gap:8px;justify-content:flex-start;align-items:center;flex-wrap:wrap;font-size:13.5px;color:var(--muted)}
   .hero-facts i{font-style:normal;color:var(--line)}
-  .hero-links{margin-top:30px;display:flex;gap:28px;justify-content:center;font-size:17px}
+  .hero-links{margin-top:30px;display:flex;gap:28px;justify-content:flex-start;font-size:17px}
   .hero-links a{color:var(--accent)}
   .hero-links a:hover{text-decoration:underline}
 
@@ -118,7 +118,7 @@
   .section-head p{color:var(--muted);font-size:18.5px;margin-top:14px;max-width:640px;letter-spacing:-.005em;line-height:1.5}
 
   .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:14px}
-  .cell{background:var(--bg-soft);border:1px solid #1c1c1e;border-radius:16px;padding:28px 26px;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+  .cell{background:var(--bg-soft);border:1px solid #1c1c1e;border-radius:10px;padding:28px 26px;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
   .cell:hover{transform:translateY(-3px);box-shadow:0 18px 48px rgba(0,0,0,.55);border-color:rgba(41,151,255,.24)}
   .cell h3{font-size:18px;font-weight:600;margin-bottom:8px;letter-spacing:-.01em}
   .cell p{color:var(--muted);font-size:15.5px;line-height:1.6}
@@ -129,7 +129,7 @@
   .prose p{color:var(--ink-2);font-size:17px;line-height:1.7;margin-bottom:22px}
   .prose p:last-child{margin-bottom:0}
   .prose b{color:var(--ink);font-weight:600}
-  .facts{background:var(--bg-soft);border-radius:16px;padding:28px 26px}
+  .facts{background:var(--bg-soft);border-radius:10px;padding:28px 26px;overflow:hidden}
   .facts-title{font-size:11.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
 
   .r-row{display:flex;justify-content:space-between;gap:20px;padding:12px 0;border-bottom:1px solid var(--line);font-size:14.5px}
@@ -138,10 +138,10 @@
   .r-row span:last-child{font-weight:500;text-align:right}
   .r-row a{color:var(--accent)}
   .r-row a:hover{text-decoration:underline;text-underline-offset:3px}
-  .record{margin-top:44px;background:var(--bg-soft);border-radius:16px;padding:36px 34px}
+  .record{margin-top:44px;background:var(--bg-soft);border-radius:10px;padding:36px 34px;overflow:hidden}
 
   .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
-  .stat{background:var(--bg-soft);border:1px solid #1c1c1e;border-radius:16px;padding:30px 24px;text-align:center;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+  .stat{background:var(--bg-soft);border:1px solid #1c1c1e;border-radius:10px;padding:30px 24px;text-align:center;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
   .stat:hover{transform:translateY(-3px);box-shadow:0 18px 48px rgba(0,0,0,.55);border-color:rgba(41,151,255,.24)}
   .stat b{display:block;font-size:40px;font-weight:700;letter-spacing:-.02em}
   .stat span{color:var(--muted);font-size:13.5px;line-height:1.4;display:block;margin-top:4px}
@@ -161,7 +161,7 @@
   .v-tag.live{color:#70d7ff;border-color:rgba(112,215,255,.32);background:rgba(112,215,255,.07)}
 
   .channels{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin-top:44px}
-  .channel{background:var(--bg-soft);border:1px solid #1c1c1e;border-radius:16px;padding:26px 24px;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+  .channel{background:var(--bg-soft);border:1px solid #1c1c1e;border-radius:10px;padding:26px 24px;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
   .channel:hover{transform:translateY(-3px);box-shadow:0 18px 48px rgba(0,0,0,.55);border-color:rgba(41,151,255,.24)}
   .channel h3{font-size:17px;font-weight:600;margin-bottom:6px}
   .channel .ch-role{display:block;font-size:11.5px;font-weight:600;color:var(--accent);letter-spacing:.09em;text-transform:uppercase;margin-bottom:10px}
@@ -175,6 +175,24 @@
 
   footer{border-top:1px solid var(--line);padding:26px 0;font-size:13px;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
   footer a:hover{text-decoration:underline}
+
+  /* Hana-style macOS window system */
+  .hero-cols{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+  @media(max-width:960px){.hero-cols{grid-template-columns:1fr;gap:44px}}
+  .code-win{background:#1e1e20;border:1px solid #2e2e33;border-radius:10px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.65);text-align:left}
+  .win-bar{position:relative;display:flex;align-items:center;gap:7px;height:38px;padding:0 14px;background:#161618;border-bottom:1px solid #2a2a2e}
+  .wd{width:11px;height:11px;border-radius:50%;flex:none}
+  .wd.r{background:#ff5f57}.wd.y{background:#febc2e}.wd.g{background:#28c840}
+  .win-title{position:absolute;left:50%;transform:translateX(-50%);font-family:"SF Mono",ui-monospace,Menlo,monospace;font-size:12px;color:#a0a0a5;white-space:nowrap}
+  .code-lines{padding:20px 0 24px;font-family:"SF Mono",ui-monospace,Menlo,monospace;font-size:13.5px;line-height:21px;overflow-x:auto;color:#c7c7cc}
+  .cl{display:flex;gap:18px;padding:0 22px;white-space:pre;opacity:0;transform:translateY(5px)}
+  .cl.in{opacity:1;transform:none;transition:opacity .4s ease,transform .4s ease}
+  .cl i{width:20px;text-align:right;color:#5d6c79;font-style:normal;flex:none;user-select:none}
+  .cl .k{color:#7fb3ff}.cl .f{color:#70d7ff}.cl .s{color:#8bd0ff}.cl .p{color:#2997ff}.cl .c{color:#8e8e93}
+  .facts .win-bar{margin:-28px -26px 22px}
+  .record .win-bar{margin:-36px -34px 26px}
+  @media(max-width:720px){.facts .win-bar{margin:-22px -20px 18px}.record .win-bar{margin:-22px -18px 20px}}
+  @media(prefers-reduced-motion:reduce){.cl{opacity:1;transform:none;transition:none}}
 
   @media(max-width:900px){
     header .wrap.nav{height:auto;flex-wrap:wrap;padding:10px 0;row-gap:8px}
@@ -229,6 +247,8 @@
 </header>
 
 <div class="hero wrap" id="top">
+  <div class="hero-cols">
+  <div class="hero-copy">
   <div class="eyebrow">Tariq Chehardy LLC</div>
   <h1>Absolute precision.<br>Built to production.</h1>
   <p><b>Senior expert-level software.</b> Custom code, custom scripts, commissioned programming, and reverse engineering, engineered to production standard from the first line. A private, founder-led company: the person who scopes your work is the person who builds it.</p>
@@ -237,6 +257,26 @@
     <a href="#profile">The company &rsaquo;</a>
     <a href="#specializations">What we do &rsaquo;</a>
     <a href="#ventures">Ventures &rsaquo;</a>
+  </div>
+  </div>
+  <div class="code-win" role="img" aria-label="PowerShell code showing a commissioned delivery from spec to documented handoff">
+    <div class="win-bar"><span class="wd r"></span><span class="wd y"></span><span class="wd g"></span><span class="win-title">handoff.ps1</span></div>
+    <div class="code-lines">
+      <div class="cl"><i>1</i><span><span class="c"># commissioned work, engineered to production</span></span></div>
+      <div class="cl"><i>2</i><span><span class="k">Function</span> <span class="f">Invoke-Delivery</span> {</span></div>
+      <div class="cl"><i>3</i><span>    <span class="k">param</span>([<span class="p">string</span>]$Spec = <span class="s">"absolute-precision"</span>)</span></div>
+      <div class="cl"><i>4</i><span> </span></div>
+      <div class="cl"><i>5</i><span>    $build = <span class="f">Start-Build</span> <span class="p">-Spec</span> $Spec <span class="p">-Standard</span> <span class="s">"production"</span></span></div>
+      <div class="cl"><i>6</i><span>    $build | <span class="f">Test-Quality</span> <span class="p">-PassRate</span> 100</span></div>
+      <div class="cl"><i>7</i><span>    $build | <span class="f">Write-Documentation</span> <span class="p">-Complete</span></span></div>
+      <div class="cl"><i>8</i><span> </span></div>
+      <div class="cl"><i>9</i><span>    <span class="k">return</span> $build | <span class="f">Complete-Handoff</span> <span class="p">-OnSchedule</span></span></div>
+      <div class="cl"><i>10</i><span>}</span></div>
+      <div class="cl"><i>11</i><span> </span></div>
+      <div class="cl"><i>12</i><span><span class="c"># one scope. one builder. zero handoffs.</span></span></div>
+      <div class="cl"><i>13</i><span><span class="f">Invoke-Delivery</span></span></div>
+    </div>
+  </div>
   </div>
 </div>
 
@@ -253,7 +293,7 @@
       <p>The company operates in the open where it can. Products and releases are published publicly, company records are maintained on this site, and every engagement runs on written scope, fixed estimates, and direct contact with the founder. Discretion is the default for client work; transparency is the default for everything else.</p>
     </div>
     <div class="facts">
-      <div class="facts-title">At a glance</div>
+      <div class="win-bar"><span class="wd r"></span><span class="wd y"></span><span class="wd g"></span><span class="win-title">at a glance</span></div>
       <div class="r-row"><span>Founded</span><span>2020 · California</span></div>
       <div class="r-row"><span>Headquarters</span><span>Dallas, TX</span></div>
       <div class="r-row"><span>Structure</span><span>Private LLC · founder-led</span></div>
@@ -354,6 +394,7 @@
     <p>This site is the official public record of Tariq Chehardy LLC: company and personal public records, published and hosted right here.</p>
   </div>
   <div class="record">
+    <div class="win-bar"><span class="wd r"></span><span class="wd y"></span><span class="wd g"></span><span class="win-title">official record</span></div>
     <div class="r-row"><span>Legal name</span><span>Tariq Chehardy LLC</span></div>
     <div class="r-row"><span>Entity type</span><span>Limited Liability Company · private, founder-led</span></div>
     <div class="r-row"><span>Founded</span><span>2020</span></div>
@@ -509,6 +550,17 @@
     }, { threshold: .5 });
     els.forEach(function (el) { obs.observe(el); });
   })();
+  /* hero code window: staggered type-in */
+  (function () {
+    var lines = document.querySelectorAll(".code-lines .cl");
+    if (!lines.length) return;
+    var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduced) { lines.forEach(function (l) { l.classList.add("in"); }); return; }
+    for (var i = 0; i < lines.length; i++) {
+      (function (idx) { setTimeout(function () { lines[idx].classList.add("in"); }, 260 + idx * 130); })(i);
+    }
+  })();
+
   function escapeHtml(s) {
     return s.replace(/[&<>"']/g, function (ch) {
       return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[ch];
