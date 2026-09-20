@@ -3,8 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <title>Tariq Chehardy LLC · Senior Expert-Level Software</title>
-<noscript><style>.loader{display:none}</style></noscript>
+<noscript><style>.loader{display:none}  /* cube-motion system: press states, copy pills, replay */
+  [data-press]{transition-property:scale,background-color,color;transition-duration:.32s,var(--t-colour),var(--t-colour);transition-timing-function:var(--ease)}
+  [data-press]:active{transition-duration:.12s,var(--t-colour),var(--t-colour);scale:.97}
+  @media(prefers-reduced-motion:reduce){[data-press]:active{opacity:.8;scale:1}}
+  .install{height:36px;display:inline-flex;align-items:center;gap:8px;padding:0 6px 0 13px;margin-top:4px;max-width:100%;font-family:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;color:var(--ink);background:#101010;border-radius:980px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.1),0 6px 16px -8px rgba(0,0,0,.6)}
+  .install .cmd{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .copy,.replay{border:0;cursor:pointer;height:24px;display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:0 11px;border-radius:980px;font:inherit;font-family:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;font-weight:500;color:#a1a1a6;background:#1a1a1a;box-shadow:inset 0 0 0 1px rgba(255,255,255,.08);transition:background-color var(--t-colour) var(--ease),color var(--t-colour) var(--ease);white-space:nowrap}
+  .copy:hover,.replay:hover{color:#fff;background:#222}
+  .copy:focus-visible,.replay:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  .replay{position:absolute;right:12px;top:50%;transform:translateY(-50%);padding:0 9px;font-size:13px}
+  .faces{position:relative;display:inline-flex;align-items:center}
+  .face,.face-in{transition:opacity .22s var(--ease),filter .22s var(--ease),scale .22s var(--ease);will-change:opacity,filter,scale}
+  .face-in{position:absolute;inset:0;opacity:0;filter:blur(4px);scale:.92}
+  .copied .face{opacity:0;filter:blur(4px);scale:.92}
+  .copied .face-in{opacity:1;filter:blur(0);scale:1}
+  @media(max-width:560px){.install .cmd{max-width:56vw}}
+</style></noscript>
 <meta name="description" content="Tariq Chehardy LLC: senior expert-level software. Custom code, custom scripts, commissioned programming, reverse engineering, PowerShell production, and design. Founded 2020, Dallas, TX. Commercial inquiries: TariqChehardy@gmail.com.">
 <meta name="keywords" content="Tariq Chehardy, Tariq Chehardy LLC, custom code, custom scripts, commissioned programming, reverse engineering, PowerShell, software engineering, Dallas TX">
 <link rel="canonical" href="https://tariqchehardy-io.github.io/tariq-chehardy-llc/">
@@ -60,7 +79,7 @@
   @media(prefers-reduced-motion:reduce){.loader-bar i{animation:none}}
   :root{
     --bg:#000000; --bg-soft:#101010; --ink:#f5f5f7; --muted:#a1a1a6; --ink-2:#c7c7cc;
-    --line:#242424; --accent:#2997ff;
+    --line:#242424; --accent:#2997ff; --ease:cubic-bezier(.2,0,0,1);--t-colour:.16s;--t-enter:.64s;--stagger:70ms;
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
@@ -74,7 +93,7 @@
   .skip{position:absolute;left:-9999px}
   .skip:focus{left:16px;top:12px;z-index:99;background:#101010;padding:8px 14px;border-radius:8px;box-shadow:0 2px 14px rgba(0,0,0,.6);font-size:14px}
   a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
-  .reveal{opacity:0;transform:translateY(12px);transition:opacity .55s ease,transform .55s ease}
+  .reveal{opacity:0;transform:translateY(12px);transition:opacity var(--t-enter) var(--ease),transform var(--t-enter) var(--ease)}
   .reveal.in{opacity:1;transform:none}
   @media(prefers-reduced-motion:reduce){.reveal{transition:none;opacity:1;transform:none}}
   .nav{display:flex;align-items:center;justify-content:space-between;height:56px;font-size:14px}
@@ -100,7 +119,7 @@
   @keyframes heroIn{from{opacity:0;transform:translateY(18px)}}
   @media(prefers-reduced-motion:reduce){.hero>*{animation:none}}
   .hero .eyebrow{font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:18px}
-  h1{font-size:clamp(42px,7.5vw,76px);font-weight:700;letter-spacing:-.025em;line-height:1.05;
+  h1{font-size:clamp(42px,7.5vw,76px);font-weight:600;letter-spacing:-.038em;line-height:1.05;text-wrap:balance;
     background:linear-gradient(90deg,#ffffff,#8bd0ff);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
   .hero p{color:var(--muted);font-size:clamp(18px,2.3vw,22px);letter-spacing:-.008em;max-width:640px;margin:22px 0 0;line-height:1.45}
   .hero p b{color:var(--ink);font-weight:600}
@@ -112,13 +131,13 @@
 
   section{padding:72px 0;border-top:1px solid var(--line)}
   section[id]{scroll-margin-top:72px}
-  h2{font-size:clamp(28px,4.5vw,40px);font-weight:700;letter-spacing:-.02em;line-height:1.12}
+  h2{font-size:clamp(28px,4.5vw,40px);font-weight:600;letter-spacing:-.02em;line-height:1.12;text-wrap:balance}
   .section-head{margin-bottom:44px}
   .section-eyebrow{display:inline-block;font-size:11.5px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--accent);background:rgba(41,151,255,.08);border:1px solid rgba(41,151,255,.22);padding:5px 12px;border-radius:999px;margin-bottom:16px}
   .section-head p{color:var(--muted);font-size:18.5px;margin-top:14px;max-width:640px;letter-spacing:-.005em;line-height:1.5}
 
   .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:14px}
-  .cell{background:var(--bg-soft);border:1px solid #1c1c1e;border-radius:10px;padding:28px 26px;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+  .cell{background:var(--bg-soft);border:1px solid #1c1c1e;border-radius:24px;padding:28px 26px;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
   .cell:hover{transform:translateY(-3px);box-shadow:0 18px 48px rgba(0,0,0,.55);border-color:rgba(41,151,255,.24)}
   .cell h3{font-size:18px;font-weight:600;margin-bottom:8px;letter-spacing:-.01em}
   .cell p{color:var(--muted);font-size:15.5px;line-height:1.6}
@@ -129,7 +148,7 @@
   .prose p{color:var(--ink-2);font-size:17px;line-height:1.7;margin-bottom:22px}
   .prose p:last-child{margin-bottom:0}
   .prose b{color:var(--ink);font-weight:600}
-  .facts{background:var(--bg-soft);border-radius:10px;padding:28px 26px;overflow:hidden}
+  .facts{background:var(--bg-soft);border-radius:24px;padding:28px 26px;overflow:hidden}
   .facts-title{font-size:11.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
 
   .r-row{display:flex;justify-content:space-between;gap:20px;padding:12px 0;border-bottom:1px solid var(--line);font-size:14.5px}
@@ -138,10 +157,10 @@
   .r-row span:last-child{font-weight:500;text-align:right}
   .r-row a{color:var(--accent)}
   .r-row a:hover{text-decoration:underline;text-underline-offset:3px}
-  .record{margin-top:44px;background:var(--bg-soft);border-radius:10px;padding:36px 34px;overflow:hidden}
+  .record{margin-top:44px;background:var(--bg-soft);border-radius:24px;padding:36px 34px;overflow:hidden}
 
   .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
-  .stat{background:var(--bg-soft);border:1px solid #1c1c1e;border-radius:10px;padding:30px 24px;text-align:center;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+  .stat{background:var(--bg-soft);border:1px solid #1c1c1e;border-radius:24px;padding:30px 24px;text-align:center;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
   .stat:hover{transform:translateY(-3px);box-shadow:0 18px 48px rgba(0,0,0,.55);border-color:rgba(41,151,255,.24)}
   .stat b{display:block;font-size:40px;font-weight:700;letter-spacing:-.02em}
   .stat span{color:var(--muted);font-size:13.5px;line-height:1.4;display:block;margin-top:4px}
@@ -161,7 +180,7 @@
   .v-tag.live{color:#70d7ff;border-color:rgba(112,215,255,.32);background:rgba(112,215,255,.07)}
 
   .channels{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin-top:44px}
-  .channel{background:var(--bg-soft);border:1px solid #1c1c1e;border-radius:10px;padding:26px 24px;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+  .channel{background:var(--bg-soft);border:1px solid #1c1c1e;border-radius:24px;padding:26px 24px;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
   .channel:hover{transform:translateY(-3px);box-shadow:0 18px 48px rgba(0,0,0,.55);border-color:rgba(41,151,255,.24)}
   .channel h3{font-size:17px;font-weight:600;margin-bottom:6px}
   .channel .ch-role{display:block;font-size:11.5px;font-weight:600;color:var(--accent);letter-spacing:.09em;text-transform:uppercase;margin-bottom:10px}
@@ -183,8 +202,8 @@
   .win-bar{position:relative;display:flex;align-items:center;gap:7px;height:38px;padding:0 14px;background:#161618;border-bottom:1px solid #2a2a2e}
   .wd{width:11px;height:11px;border-radius:50%;flex:none}
   .wd.r{background:#ff5f57}.wd.y{background:#febc2e}.wd.g{background:#28c840}
-  .win-title{position:absolute;left:50%;transform:translateX(-50%);font-family:"SF Mono",ui-monospace,Menlo,monospace;font-size:12px;color:#a0a0a5;white-space:nowrap}
-  .code-lines{padding:20px 0 24px;font-family:"SF Mono",ui-monospace,Menlo,monospace;font-size:13.5px;line-height:21px;overflow-x:auto;color:#c7c7cc}
+  .win-title{position:absolute;left:50%;transform:translateX(-50%);font-family:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;color:#a0a0a5;white-space:nowrap}
+  .code-lines{padding:20px 0 24px;font-family:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13.5px;line-height:21px;overflow-x:auto;color:#c7c7cc}
   .cl{display:flex;gap:18px;padding:0 22px;white-space:pre;opacity:0;transform:translateY(5px)}
   .cl.in{opacity:1;transform:none;transition:opacity .4s ease,transform .4s ease}
   .cl i{width:20px;text-align:right;color:#5d6c79;font-style:normal;flex:none;user-select:none}
@@ -242,7 +261,7 @@
       <a href="#record">Record</a>
       <a href="#principles">Principles</a>
     </nav>
-    <a class="cta" href="#contact">Inquiries</a>
+    <a class="cta" data-press href="#contact">Inquiries</a>
   </div>
 </header>
 
@@ -260,7 +279,7 @@
   </div>
   </div>
   <div class="code-win" role="img" aria-label="PowerShell code showing a commissioned delivery from spec to documented handoff">
-    <div class="win-bar"><span class="wd r"></span><span class="wd y"></span><span class="wd g"></span><span class="win-title">handoff.ps1</span></div>
+    <div class="win-bar"><span class="wd r"></span><span class="wd y"></span><span class="wd g"></span><span class="win-title">handoff.ps1</span><button class="replay" type="button" aria-label="Replay code animation">↻</button></div>
     <div class="code-lines">
       <div class="cl"><i>1</i><span><span class="c"># commissioned work, engineered to production</span></span></div>
       <div class="cl"><i>2</i><span><span class="k">Function</span> <span class="f">Invoke-Delivery</span> {</span></div>
@@ -437,7 +456,7 @@
         <span class="ch-role">Primary · commissioned work</span>
         <h3>Email</h3>
         <p>Commissioned work, partnerships, and business. Include scope for the fastest response.</p>
-        <a href="mailto:TariqChehardy@gmail.com">TariqChehardy@gmail.com</a>
+        <div class="install"><a class="cmd" href="mailto:TariqChehardy@gmail.com">TariqChehardy@gmail.com</a><button class="copy" type="button" data-copy="TariqChehardy@gmail.com" aria-label="Copy email address"><span class="faces"><span class="face">copy</span><span class="face face-in">copied</span></span></button></div>
       </div>
       <div class="channel">
         <span class="ch-role">Public code &amp; releases</span>
@@ -501,7 +520,7 @@
   document.querySelectorAll(".grid, .ventures, .channels").forEach(function (grid) {
     Array.prototype.forEach.call(grid.children, function (child, i) {
       child.classList.add("reveal");
-      child.style.transitionDelay = Math.min(i * 60, 420) + "ms";
+      child.style.transitionDelay = Math.min(i * 70, 490) + "ms";
     });
   });
   if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
@@ -550,16 +569,25 @@
     }, { threshold: .5 });
     els.forEach(function (el) { obs.observe(el); });
   })();
-  /* hero code window: staggered type-in */
-  (function () {
+  /* hero code window: staggered type-in, replayable */
+  var runCode = function () {
     var lines = document.querySelectorAll(".code-lines .cl");
     if (!lines.length) return;
     var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (reduced) { lines.forEach(function (l) { l.classList.add("in"); }); return; }
     for (var i = 0; i < lines.length; i++) {
-      (function (idx) { setTimeout(function () { lines[idx].classList.add("in"); }, 260 + idx * 130); })(i);
+      (function (idx) { setTimeout(function () { lines[idx].classList.remove("in"); void lines[idx].offsetWidth; lines[idx].classList.add("in"); }, 260 + idx * 130); })(i);
     }
-  })();
+  };
+  runCode();
+  document.querySelectorAll(".replay").forEach(function (b) { b.addEventListener("click", runCode); });
+  document.querySelectorAll("[data-copy]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      if (navigator.clipboard) navigator.clipboard.writeText(btn.getAttribute("data-copy")).catch(function () {});
+      btn.classList.add("copied");
+      setTimeout(function () { btn.classList.remove("copied"); }, 1400);
+    });
+  });
 
   function escapeHtml(s) {
     return s.replace(/[&<>"']/g, function (ch) {
