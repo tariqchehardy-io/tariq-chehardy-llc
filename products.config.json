@@ -1,7 +1,9 @@
 {
   "ignore": [
     "tariqchehardy-io",
-    "tariq-chehardy-llc"
+    "tariq-chehardy-llc",
+    "pokedot-ai.github.io",
+    "demo-repository"
   ],
   "featured": [
     "poke-core"
