@@ -199,10 +199,10 @@
   .wd{width:11px;height:11px;border-radius:50%;flex:none}
   .wd.r{background:#ff5f57}.wd.y{background:#febc2e}.wd.g{background:#28c840}
   .win-title{position:absolute;left:50%;transform:translateX(-50%);font-family:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;color:#a0a0a5;white-space:nowrap}
-  .code-lines{padding:20px 0 24px;font-family:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13.5px;line-height:21px;overflow-x:auto;color:#c7c7cc}
-  .cl{display:flex;gap:18px;padding:0 22px;white-space:pre;opacity:0;transform:translateY(5px)}
+  .code-lines{padding:20px 0 24px;font-family:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;line-height:21px;overflow-x:auto;color:#c7c7cc}
+  .cl{display:flex;gap:14px;padding:0 16px;white-space:pre;opacity:0;transform:translateY(5px)}
   .cl.in{opacity:1;transform:none;transition:opacity .4s ease,transform .4s ease}
-  .cl i{width:20px;text-align:right;color:#5d6c79;font-style:normal;flex:none;user-select:none}
+  .cl i{width:18px;text-align:right;color:#5d6c79;font-style:normal;flex:none;user-select:none}
   .cl .k{color:#7fb3ff}.cl .f{color:#70d7ff}.cl .s{color:#8bd0ff}.cl .p{color:#2997ff}.cl .c{color:#8e8e93}
   .facts .win-bar{margin:-28px -26px 22px}
   .record .win-bar{margin:-36px -34px 26px}
@@ -279,13 +279,13 @@
     <div class="code-lines">
       <div class="cl"><i>1</i><span><span class="c"># commissioned work, engineered to production</span></span></div>
       <div class="cl"><i>2</i><span><span class="k">Function</span> <span class="f">Invoke-Delivery</span> {</span></div>
-      <div class="cl"><i>3</i><span>    <span class="k">param</span>([<span class="p">string</span>]$Spec = <span class="s">"absolute-precision"</span>)</span></div>
+      <div class="cl"><i>3</i><span>  <span class="k">param</span>([<span class="p">string</span>]$Spec = <span class="s">"absolute-precision"</span>)</span></div>
       <div class="cl"><i>4</i><span> </span></div>
-      <div class="cl"><i>5</i><span>    $build = <span class="f">Start-Build</span> <span class="p">-Spec</span> $Spec <span class="p">-Standard</span> <span class="s">"production"</span></span></div>
-      <div class="cl"><i>6</i><span>    $build | <span class="f">Test-Quality</span> <span class="p">-PassRate</span> 100</span></div>
-      <div class="cl"><i>7</i><span>    $build | <span class="f">Write-Documentation</span> <span class="p">-Complete</span></span></div>
+      <div class="cl"><i>5</i><span>  $build = <span class="f">Start-Build</span> $Spec <span class="s">"production"</span></span></div>
+      <div class="cl"><i>6</i><span>  $build | <span class="f">Test-Quality</span> -PassRate 100</span></div>
+      <div class="cl"><i>7</i><span>  $build | <span class="f">Write-Documentation</span> -Complete</span></div>
       <div class="cl"><i>8</i><span> </span></div>
-      <div class="cl"><i>9</i><span>    <span class="k">return</span> $build | <span class="f">Complete-Handoff</span> <span class="p">-OnSchedule</span></span></div>
+      <div class="cl"><i>9</i><span>  <span class="k">return</span> $build | <span class="f">Complete-Handoff</span> -OnSchedule</span></div>
       <div class="cl"><i>10</i><span>}</span></div>
       <div class="cl"><i>11</i><span> </span></div>
       <div class="cl"><i>12</i><span><span class="c"># one scope. one builder. zero handoffs.</span></span></div>
