@@ -42,24 +42,29 @@ def main():
     ignore = set(config.get("ignore", []))
     featured = config.get("featured", [])
 
+    sources = [OWNER, "pokedot-ai"]
     repos = []
-    page = 1
-    while True:
-        batch = get(f"/users/{OWNER}/repos?per_page=100&page={page}")
-        if not batch:
-            break
-        repos.extend(batch)
-        if len(batch) < 100:
-            break
-        page += 1
+    for src in sources:
+        page = 1
+        while True:
+            batch = get(f"/users/{src}/repos?per_page=100&page={page}")
+            if not batch:
+                break
+            repos.extend(batch)
+            if len(batch) < 100:
+                break
+            page += 1
 
     products = []
+    seen = set()
     for repo in repos:
         name = repo.get("name", "")
-        if name in ignore or repo.get("fork"):
+        full = repo.get("full_name", name)
+        if name in ignore or repo.get("fork") or full in seen:
             continue
+        seen.add(full)
         release = None
-        rel = get(f"/repos/{OWNER}/{name}/releases/latest", optional=True)
+        rel = get(f"/repos/{full}/releases/latest", optional=True)
         if rel:
             release = {
                 "tag": rel.get("tag_name", ""),
