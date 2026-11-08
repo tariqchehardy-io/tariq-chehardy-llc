@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-07T09:51:16.002401+00:00",
+  "generated_at": "2026-11-08T10:05:07.392653+00:00",
   "products": [
     {
       "name": "poke-core",
@@ -28,7 +28,7 @@
     },
     {
       "name": "muse-sites",
-      "description": "",
+      "description": "Home for the sites and spaces Muse builds for Tariq",
       "url": "https://github.com/tariqchehardy-io/muse-sites",
       "language": "HTML",
       "stars": 0,
